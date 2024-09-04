@@ -1,26 +1,23 @@
 package app;
 
+import java.util.ArrayList;
+
 public class Application {
 
     public static void main(String[] args) {
+        Personne personne1 = new Personne("Tank", "Bryan", "Rte de Montreux 123", "Châtel-St-Denis", 1618);
+        Personne personne2 = new Personne("Hamid", "Moha", "Rue du poulet 21", "Attalens", 1213);
+        Personne personne3 = new Personne("Nguyen", "Larke", "Route de la Fontaine 1", "Martany", 1179);
 
-        //  --------------------------------------------------        
-        //           __     _____ _____ ____  _____ 
-        //           \ \   / / _ \_   _|  _ \| ____|
-        //            \ \ / / | | || | | |_) |  _|  
-        //             \ V /| |_| || | |  _ <| |___ 
-        //              \_/__\___/_|_|_|_| \_\_____|
-        //                / ___/ _ \|  _ \| ____|   
-        //               | |  | | | | | | |  _|     
-        //               | |__| |_| | |_| | |___    
-        //                \____\___/|____/|_____|   
-        //                    |_ _/ ___|_ _|        
-        //                     | | |    | |         
-        //                     | | |___ | |         
-        //                    |___\____|___|        
-        //                                                  
-        //  ---------------------------------------------------
+        ArrayList<Personne> listePersonnes = new ArrayList<Personne>();
 
+        listePersonnes.add(personne1);
+        listePersonnes.add(personne2);
+        listePersonnes.add(personne3);
+
+        for (Personne personne : listePersonnes) {
+            System.out.println("Nom de la personne : " + personne.getNom());
+        }
     }
 
 }
